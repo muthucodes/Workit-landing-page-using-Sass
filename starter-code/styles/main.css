@@ -142,6 +142,8 @@ body {
   text-decoration: underline;
   text-decoration-color: #44ffa1;
   text-decoration-thickness: 0.3rem;
+  text-underline-position: under;
+  text-underline-offset: -0.6rem;
 }
 .header .section-hero .btn {
   margin-bottom: 5rem;
