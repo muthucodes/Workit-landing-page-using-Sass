@@ -1,0 +1,281 @@
+@import "reset";
+
+$black: #24053e;
+$green: #44ffa1;
+$grey: #584d62;
+$pink: #fcf8ff;
+$white: #ffffff;
+
+// Fonts
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/fonts/manrope/Manrope-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@mixin Heading-L {
+  font-family: "Fraunces";
+  font-size: 8rem;
+  line-height: 80px;
+  font-weight: 600;
+}
+
+@mixin Heading-M {
+  font-family: "Fraunces";
+  font-size: 5.6rem;
+  line-height: 64px;
+  font-weight: 600;
+}
+
+@mixin Heading-S {
+  font-family: "Fraunces";
+  font-size: 3.2rem;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope";
+  font-weight: 400;
+  line-height: 32px;
+  font-size: 1.8rem;
+  color: $black;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 111.4rem;
+  margin: 0 auto;
+  // padding: 0 2rem;
+}
+
+.btn {
+  text-decoration: none;
+  font-family: "Manrope";
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.18px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &-primary {
+    padding: 1.3rem 2.5rem;
+    background-color: $green;
+    color: $black;
+    border: 3px solid $green;
+
+    &:hover {
+      background-color: $black;
+      color: $green;
+    }
+  }
+
+  &-secondary {
+    color: $white;
+    border-bottom: 3px solid $green;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.header {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    border-radius: 0 0 50% 50%;
+    transform: scaleX(1.8) translateY(-25rem);
+
+    z-index: -1;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 0;
+  }
+
+  .section-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      @include Heading-L;
+      color: $white;
+
+      max-width: 63.5rem;
+      margin-bottom: 4rem;
+      text-align: center;
+
+      .underline {
+        text-decoration: underline;
+        text-decoration-color: $green;
+        text-decoration-thickness: 0.3rem;
+        // border-bottom: 3px solid $green;
+      }
+    }
+
+    .btn {
+      margin-bottom: 5rem;
+    }
+
+    img {
+      max-width: 76.7rem;
+      margin-bottom: 9rem;
+    }
+  }
+  .left-illustration,
+  .right-illustration {
+    position: absolute;
+  }
+  .left-illustration {
+    top: 15%;
+    left: 0;
+    transform: translateX(-40%);
+  }
+  .right-illustration {
+    top: 30%;
+    right: 0;
+    transform: translateX(30%);
+  }
+}
+
+.section-features {
+  position: relative;
+  margin-bottom: 28rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $pink;
+    border-radius: 0 0 50% 50%;
+    transform: scaleX(1.8) scaleY(3) translateY(-4rem);
+
+    z-index: -2;
+  }
+
+  .feature-list {
+    display: flex;
+    gap: 2.6rem;
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .feature-number {
+        width: 5.6rem;
+        height: 5.6rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 5.6rem;
+        border: 1px solid $black;
+        border-radius: 50%;
+
+        @include Heading-S;
+        font-size: 2.4rem;
+      }
+
+      .feature-title {
+        @include Heading-S;
+        margin-bottom: 2.8rem;
+      }
+
+      .feature-description {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.section-founder-info {
+  position: relative;
+  height: 65rem;
+  // border: 1px solid red;
+  margin-bottom: 6rem;
+  .founder-pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 47.7rem;
+    height: 47.7rem;
+    z-index: -1;
+  }
+
+  .founder-card {
+    background-color: $black;
+    width: 73rem;
+    color: $white;
+    padding: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: start;
+    position: absolute;
+    right: 0;
+    bottom: 6.5rem;
+
+    h2 {
+      font-family: "Fraunces";
+    }
+  }
+
+  .founder-info-illustration {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.8rem;
+  margin-bottom: 6rem;
+
+  .social-media-logos {
+    display: flex;
+    gap: 3rem;
+  }
+
+  a:hover {
+    img {
+      filter: brightness(30%);
+    }
+  }
+}
+
+@import "queries";

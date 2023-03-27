@@ -1,0 +1,242 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: 68.9rem;
+    margin: 0 auto;
+    // padding: 0 2rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    &-primary {
+      padding: 1.1rem 2.1rem;
+    }
+  }
+
+  .header {
+    &::before {
+      transform: scaleX(2.2) translateY(-20rem);
+    }
+    .navbar {
+      padding: 3.2rem 0 5.6rem 0;
+    }
+
+    .section-hero {
+      h1 {
+        font-size: 6rem;
+        line-height: 60px;
+
+        max-width: 57.3rem;
+        padding: 0 5.6rem;
+      }
+
+      img {
+        max-width: 51.4rem;
+        margin-bottom: 5.6rem;
+      }
+    }
+
+    .left-illustration {
+      top: 10%;
+      transform: translateX(-65%);
+    }
+    .right-illustration {
+      transform: translateX(55%);
+    }
+  }
+
+  .section-features {
+    margin-bottom: 20rem;
+    &::before {
+      transform: scaleX(2.2) scaleY(1.8) translateY(-4rem);
+    }
+    .feature-list {
+      flex-direction: column;
+      gap: 4.8rem;
+
+      .feature {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        max-width: 57.3rem;
+        column-gap: 3.2rem;
+        .feature-number {
+          grid-row: 2/3;
+          margin-bottom: 0;
+          align-self: flex-start;
+
+          font-size: 2rem;
+          line-height: 36px;
+
+          width: 4.8rem;
+          height: 4.8rem;
+        }
+        .feature-title {
+          grid-column: 2/3;
+          margin-bottom: 1.2rem;
+
+          font-size: 2.8rem;
+          line-height: 36px;
+        }
+        .feature-description {
+          grid-column: 2 / 3;
+          text-align: left;
+          color: #584d62;
+
+          font-size: 1.6rem;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+
+  .section-founder-info {
+    height: 52.6rem;
+    // max-width: 69rem;
+    margin-bottom: 6rem;
+
+    .founder-pic {
+      width: 28.1rem;
+      height: 28.1rem;
+    }
+
+    .founder-card {
+      width: 51.4rem;
+      padding: 4.8rem 5.6rem;
+      gap: 2.4rem;
+      bottom: 0;
+
+      h2 {
+        font-size: 4.8rem;
+        line-height: 56px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 28px;
+      }
+    }
+
+    .founder-info-illustration {
+      position: absolute;
+      bottom: -20%;
+      right: 10%;
+    }
+  }
+
+  .footer {
+    margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    max-width: 34.3rem;
+    margin: 0 auto;
+    // padding: 0 2rem;
+  }
+
+  // .btn {
+  //   font-size: 1.6rem;
+  //   &-primary {
+  //     padding: 1.1rem 2.1rem;
+  //   }
+  // }
+
+  .header {
+    &::before {
+      transform: scaleX(2.8) translateY(-15rem);
+    }
+
+    .section-hero {
+      h1 {
+        font-size: 4.5rem;
+        line-height: 50px;
+        font-style: normal;
+
+        padding: 0;
+      }
+
+      img {
+        max-width: 32rem;
+        margin-bottom: 5.6rem;
+      }
+    }
+
+    .left-illustration {
+      display: none;
+    }
+    .right-illustration {
+      display: none;
+    }
+  }
+
+  .section-features {
+    &::before {
+      transform: scaleX(3.5) scaleY(1.8) translateY(-12rem);
+    }
+    .feature-list {
+      display: flex;
+      gap: 4rem;
+
+      .feature {
+        display: flex;
+        justify-content: center;
+        gap: 2.4rem;
+
+        .feature-title {
+          margin-bottom: 0;
+        }
+        .feature-number {
+          align-self: center;
+        }
+
+        .feature-description {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .section-founder-info {
+    max-width: 34.3rem;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: auto;
+    margin-bottom: 7.4rem;
+
+    .founder-pic {
+      position: absolute;
+      width: 28.1rem;
+      height: 28.1rem;
+      // z-index: 2;
+      left: 3.1rem;
+    }
+    .founder-card {
+      position: static;
+      margin-top: 22.8rem;
+      width: 100%;
+      padding: 3.2rem;
+      text-align: center;
+      align-items: center;
+      h2 {
+        font-size: 3.2rem;
+        line-height: 48px;
+      }
+    }
+
+    .founder-info-illustration {
+      display: none;
+    }
+  }
+  .footer {
+    margin-bottom: 6rem;
+    position: static;
+  }
+}

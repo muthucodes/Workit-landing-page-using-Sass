@@ -1,0 +1,14 @@
+{
+  "name": "workit-landing-page-files",
+  "version": "1.0.0",
+  "description": "![Design preview for the Workit landing page coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:starter-code/styles"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.59.3"
+  }
+}
